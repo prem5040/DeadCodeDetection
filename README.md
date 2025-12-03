@@ -1,25 +1,72 @@
 # DeadCodeDetection
-To run the program:
 
-Create virtual environment 
-python -m venv venv 
-Activate virtual environment (on mac) 
-source venv/bin/activate
+A tool to detect dead code in your projects using Neo4j for graph-based analysis.
 
-Install the requirements
-pip install -r requirements.txt
+---
 
-Start Neo4j using Docker Compose 
-docker-compose up -d
+## 📋 Table of Contents
+- [Features](#features)
+- [Prerequisites](#prerequisites)
+- [Setup](#setup)
+- [Usage](#usage)
+- [License](#license)
 
-After 30s,  Check if it's running 
-docker-compose ps
+---
 
-Then, Open browser and
-http://localhost:7474
-Login ID: neo4j
-Password: password
+## 🌟 Features
+- Detects unused functions, classes, and variables.
+- Uses Neo4j for efficient graph-based code analysis.
+- Outputs results in a structured text file.
 
-Then run the command to get the results:
-python3 deadcode.py ./sample_code --output sample_code_results.txt
-<img width="468" height="331" alt="image" src="https://github.com/user-attachments/assets/5fb197e6-7376-4178-aca0-b362d920b123" />
+---
+
+## 🛠 Prerequisites
+- Python 3.8+
+- Docker and Docker Compose
+- Git (optional, for cloning the repository)
+
+---
+
+## 🚀 Setup
+
+1. Clone the Repository (Optional) <br>
+git clone repository-url  <br>
+cd DeadCodeDetection  <br>
+
+
+2. Create a Virtual Environment  <br>
+python3 -m venv venv
+
+3. Activate the Virtual Environment  <br>
+macOS/Linux:  <br>
+source venv/bin/activate  <br>
+Windows:  <br>
+venv\Scripts\activate  <br>
+
+4. Install Dependencies <br>
+pip install -r requirements.txt  <br>
+
+5. Start Neo4j with Docker Compose  <br>
+docker-compose up -d  <br>
+
+Wait for 30 seconds to ensure Neo4j is fully initialized.<br>
+6. Verify Neo4j is Running  <br>
+docker-compose ps <br>
+
+You should see the Neo4j container listed as Up.
+
+💻 Usage
+1. Access Neo4j Browser <br>
+Open your browser and navigate to: <br>
+🔗 http://localhost:7474 <br>
+Login Credentials: <br>
+Username: neo4j <br>
+Password: password <br>
+
+2. Run Dead Code Detection <br>
+Execute the following command to analyze your code: <br>
+python3 deadcode.py ./sample_code --output sample_code_results.txt <br>
+Note: Replace ./sample_code with the path to your project directory. <br>
+
+3. View Results <br>
+The results will be saved in the specified output file (sample_code_results.txt by default). <br>
