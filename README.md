@@ -1,18 +1,18 @@
 # DeadCodeDetection
 To run the program:
 
-# Create virtual environment 
+Create virtual environment 
 python -m venv venv 
-# Activate virtual environment (on mac) 
+Activate virtual environment (on mac) 
 source venv/bin/activate
 
-#Install the requirements
+Install the requirements
 pip install -r requirements.txt
 
-# Start Neo4j using Docker Compose 
+Start Neo4j using Docker Compose 
 docker-compose up -d
 
-# After 30s,  Check if it's running 
+After 30s,  Check if it's running 
 docker-compose ps
 
 Then, Open browser and
